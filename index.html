@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#171612" />
+    <meta name="color-scheme" content="light" />
+    <meta name="description" content="《江湖錄：風雨十三州》是一款可在瀏覽器遊玩的原創繁體中文武俠 TRPG。入門派、習絕學、立誓言，讓陰陽雙骰改寫江湖。" />
+    <link rel="canonical" href="https://allenyuu.github.io/jianghu-chronicles/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="江湖錄：風雨十三州" />
+    <meta property="og:description" content="一紙人物，萬里江湖。可單人遊玩，也可作為 2–6 人團務工具。" />
+    <meta property="og:image" content="https://allenyuu.github.io/jianghu-chronicles/og.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="江湖錄：風雨十三州" />
+    <meta name="twitter:description" content="一紙人物，萬里江湖。" />
+    <meta name="twitter:image" content="https://allenyuu.github.io/jianghu-chronicles/og.png" />
+    <title>江湖錄：風雨十三州</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">跳至主要內容</a>
+
+    <header class="topbar" id="topbar">
+      <button class="brand" type="button" data-view-target="home" aria-label="返回卷首">
+        <span class="brand-seal" aria-hidden="true">錄</span>
+        <span class="brand-word"><b>江湖錄</b><small>風雨十三州</small></span>
+      </button>
+
+      <nav class="main-nav" id="main-nav" aria-label="主要導覽">
+        <button class="nav-link active" type="button" data-view-target="home"><span>卷首</span></button>
+        <button class="nav-link" type="button" data-view-target="play"><span>江湖行</span></button>
+        <button class="nav-link" type="button" data-view-target="archive"><span>藏經閣</span></button>
+        <button class="nav-link" type="button" data-view-target="rules"><span>江湖律</span></button>
+        <button class="nav-link" type="button" data-view-target="gm"><span>掌門錦囊</span></button>
+      </nav>
+
+      <div class="topbar-tools">
+        <button class="character-chip hidden" id="character-chip" type="button" data-view-target="play">
+          <span id="chip-mark">俠</span>
+          <span><b id="chip-name">無名客</b><small id="chip-sect">未入門</small></span>
+        </button>
+        <button class="menu-button" id="menu-button" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="開啟選單">
+          <i></i><i></i><i></i>
+        </button>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="view active" id="view-home" data-view="home" aria-labelledby="home-title">
+        <div class="hero">
+          <div class="ink-mist" aria-hidden="true"></div>
+          <div class="mountain mountain-one" aria-hidden="true"></div>
+          <div class="mountain mountain-two" aria-hidden="true"></div>
+          <div class="sun-disc" aria-hidden="true"></div>
+
+          <div class="hero-copy reveal">
+            <p class="eyebrow">原創武俠桌上角色扮演 · 壹至陸人</p>
+            <h1 id="home-title"><span>風雨</span><br />十三州</h1>
+            <p class="lede">天子久病，河山有隙。八門共守的「山河盟誓」一夜焚毀，而你，恰好撿起灰燼裡那枚不該存在的第九方掌印。</p>
+            <div class="hero-actions">
+              <button class="button button-primary" id="new-game-button" type="button">提筆入江湖 <span aria-hidden="true">→</span></button>
+              <button class="button button-ghost hidden" id="continue-game-button" type="button">續寫舊卷 <span aria-hidden="true">↗</span></button>
+              <button class="text-button" type="button" data-view-target="rules">三分鐘懂規則</button>
+            </div>
+            <dl class="hero-stats" aria-label="遊戲特色">
+              <div><dt>2D6</dt><dd>陰陽雙骰</dd></div>
+              <div><dt>8</dt><dd>原創門派</dd></div>
+              <div><dt>42</dt><dd>武學招式</dd></div>
+              <div><dt>13</dt><dd>回主線</dd></div>
+            </dl>
+          </div>
+
+          <aside class="hero-scroll reveal delay-one" aria-label="本局江湖籤">
+            <div class="scroll-cap" aria-hidden="true"></div>
+            <p class="scroll-kicker">今夜 · 白蘆渡</p>
+            <blockquote>「有人借你的名字，<br />殺了一位從未見過的人。」</blockquote>
+            <div class="scroll-divider"><span>第</span><strong>一</strong><span>回</span></div>
+            <p class="scroll-foot">雨落無聲，刀出有名。</p>
+            <div class="scroll-cap bottom" aria-hidden="true"></div>
+          </aside>
+
+          <div class="hero-index" aria-hidden="true"><span>壹</span><i></i><small>JIANGHU<br />CHRONICLES</small></div>
+        </div>
+
+        <section class="premise section-pad">
+          <div class="section-label"><span>卷一</span><i></i><small>如何開始</small></div>
+          <div class="premise-heading">
+            <p class="eyebrow dark">一張人物卡，就是一份江湖欠你的解釋</p>
+            <h2>門派給你武功，<br />誓言決定你如何使用。</h2>
+          </div>
+          <div class="journey-steps">
+            <article>
+              <span class="step-number">01</span><i class="brush-mark">名</i>
+              <h3>留下姓名與誓言</h3>
+              <p>從六種來歷與五項江湖誓願中，寫下你為何第一次拔出兵刃。</p>
+            </article>
+            <article>
+              <span class="step-number">02</span><i class="brush-mark">門</i>
+              <h3>選一門，欠一筆債</h3>
+              <p>八門各有戒律與宿敵。你得到兩式真傳，也繼承一段不肯說完的舊事。</p>
+            </article>
+            <article>
+              <span class="step-number">03</span><i class="brush-mark">武</i>
+              <h3>定下武功派系</h3>
+              <p>劍、刀、拳掌、身法、內家、奇門、醫毒，決定你面對危局的手法。</p>
+            </article>
+            <article>
+              <span class="step-number">04</span><i class="brush-mark">行</i>
+              <h3>讓雙骰續寫後果</h3>
+              <p>擲陰陽雙骰。成敗之外，還會生出內息、氣勢，以及下一回合的麻煩。</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="dice-manifesto section-pad">
+          <div class="manifesto-copy">
+            <div class="section-label light"><span>卷二</span><i></i><small>陰陽雙骰</small></div>
+            <p class="eyebrow">每一擲都有兩個答案</p>
+            <h2>總和定成敗，<br />高骰定氣向。</h2>
+            <p>黑骰為陰，白骰為陽。陽高則趁勢而起；陰高則斂氣回息；陰陽相同便是「和合」，把當前結果提升一階。</p>
+            <button class="button button-paper" type="button" data-view-target="rules">展開完整江湖律</button>
+          </div>
+          <div class="dice-table" aria-label="陰陽雙骰示例">
+            <div class="die-card yin">
+              <div><span>陰</span><small>斂 · 息</small></div><strong aria-label="五點">●<br />● ●<br />● ●</strong>
+            </div>
+            <b class="math-symbol">＋</b>
+            <div class="die-card yang">
+              <div><span>陽</span><small>動 · 勢</small></div><strong aria-label="六點">● ●<br />● ●<br />● ●</strong>
+            </div>
+            <b class="math-symbol">＋</b>
+            <div class="stat-card"><small>身法</small><strong>2</strong></div>
+            <b class="math-symbol">＝</b>
+            <div class="outcome-card"><strong>十三</strong><span>傳奇</span><small>且獲得一點氣勢</small></div>
+          </div>
+        </section>
+
+        <section class="home-sects section-pad">
+          <div class="section-label"><span>卷三</span><i></i><small>八門譜</small></div>
+          <div class="section-heading">
+            <div><p class="eyebrow dark">八門同盟 · 九印成謎</p><h2>選你的師門，<br />也選一條不能違背的戒律。</h2></div>
+            <div class="heading-note"><p>門派不是職業，而是你在江湖裡的親族、名聲與歷史。武功派系則能自由搭配。</p><button class="text-button dark" type="button" data-view-target="archive">入藏經閣看全譜 →</button></div>
+          </div>
+          <div class="home-sect-grid" id="home-sect-grid"></div>
+        </section>
+
+        <section class="home-cta section-pad">
+          <div class="cta-seal" aria-hidden="true">第<br />九<br />印</div>
+          <div><p class="eyebrow">此卷尚無定局</p><h2>你的第一招，<br />要替誰而出？</h2></div>
+          <button class="button button-primary large" type="button" data-action="start-creation">建立俠客 <span>→</span></button>
+        </section>
+      </section>
+
+      <section class="view creator-view" id="view-create" data-view="create" aria-labelledby="creator-title">
+        <div class="creator-mast">
+          <button class="back-to-home" type="button" data-view-target="home">← 收卷</button>
+          <div>
+            <p class="eyebrow">人物卷 · Character folio</p>
+            <h2 id="creator-title">提筆入江湖</h2>
+          </div>
+          <p id="creator-step-label">第一筆 · 姓名來處</p>
+        </div>
+
+        <div class="creator-shell">
+          <ol class="creator-progress" aria-label="角色建立進度">
+            <li class="active" data-step-indicator="1"><span>壹</span><b>名與誓</b></li>
+            <li data-step-indicator="2"><span>貳</span><b>師與門</b></li>
+            <li data-step-indicator="3"><span>參</span><b>武與路</b></li>
+            <li data-step-indicator="4"><span>肆</span><b>成卷</b></li>
+          </ol>
+
+          <div class="creator-paper">
+            <div id="creator-content" aria-live="polite"></div>
+            <div class="creator-controls">
+              <button class="button button-ghost dark hidden" id="creator-back" type="button">上一步</button>
+              <span id="creator-hint">請完成本頁選擇</span>
+              <button class="button button-primary" id="creator-next" type="button" disabled>下一筆 <span>→</span></button>
+            </div>
+          </div>
+
+          <aside class="live-folio" id="live-folio" aria-label="即時人物摘要">
+            <div class="folio-top"><span id="folio-vow-mark">？</span><small>未成卷</small></div>
+            <h3 id="folio-name">無名客</h3>
+            <p id="folio-path">身世未明 · 師門未定</p>
+            <div class="mini-stats" id="folio-stats"></div>
+            <div class="folio-lines">
+              <p><span>江湖誓</span><b id="folio-vow">尚未立誓</b></p>
+              <p><span>門派債</span><b id="folio-debt">尚未入門</b></p>
+              <p><span>起手式</span><b id="folio-technique">尚未習武</b></p>
+            </div>
+            <p class="folio-quote">「名字寫下之後，江湖就有地方找到你。」</p>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view play-view" id="view-play" data-view="play" aria-labelledby="play-title">
+        <div class="empty-state" id="play-empty">
+          <span class="empty-seal">空</span>
+          <p class="eyebrow dark">此卷尚未題名</p>
+          <h2 id="play-title">江湖在等一個<br />願意留下名字的人。</h2>
+          <p>建立俠客後即可開始十三回主線；進度會自動保存在這台裝置。</p>
+          <button class="button button-primary" type="button" data-action="start-creation">建立第一位俠客</button>
+        </div>
+
+        <div class="game-shell hidden" id="game-shell">
+          <aside class="character-sheet" id="character-sheet">
+            <div class="sheet-heading">
+              <div class="portrait-seal" id="sheet-mark">俠</div>
+              <div><p id="sheet-epithet">初入江湖</p><h2 id="sheet-name">無名客</h2><span id="sheet-path">未入門</span></div>
+            </div>
+
+            <div class="resource-block">
+              <div class="resource-label"><span>體力</span><b id="hp-label">0 / 0</b></div>
+              <div class="resource-track hp"><i id="hp-bar"></i></div>
+              <div class="resource-label"><span>內息</span><b id="qi-label">0 / 0</b></div>
+              <div class="resource-track qi"><i id="qi-bar"></i></div>
+              <div class="momentum-row"><span>氣勢</span><div id="momentum-pips" aria-label="氣勢"></div></div>
+            </div>
+
+            <div class="sheet-stats" id="sheet-stats"></div>
+
+            <div class="sheet-section">
+              <div class="sheet-section-title"><span>所習武學</span><small id="rank-label">初境</small></div>
+              <div class="known-techniques" id="known-techniques"></div>
+            </div>
+
+            <div class="sheet-section compact">
+              <div class="sheet-section-title"><span>江湖痕跡</span><small id="scar-count">0 / 3</small></div>
+              <div class="scar-list" id="scar-list"><span>尚無重傷</span></div>
+            </div>
+
+            <div class="sheet-actions">
+              <button type="button" id="export-save">匯出人物卷</button>
+              <button type="button" id="open-save-tools">存檔工具</button>
+            </div>
+          </aside>
+
+          <section class="story-stage" aria-label="江湖故事">
+            <header class="stage-header">
+              <div><p id="chapter-kicker">風雨十三州</p><h1 id="chapter-title">第一回</h1></div>
+              <div class="campaign-progress"><span id="chapter-progress-label">0 / 13</span><div><i id="chapter-progress-bar"></i></div></div>
+            </header>
+            <div class="stage-content" id="stage-content" aria-live="polite"></div>
+          </section>
+
+          <aside class="journey-ledger">
+            <div class="ledger-heading"><span>行旅簿</span><small>自動落筆</small></div>
+            <div class="ledger-metrics">
+              <div><span>名望</span><strong id="renown-value">0</strong></div>
+              <div><span>修為</span><strong id="xp-value">0</strong></div>
+              <div><span>境界</span><strong id="rank-value">初</strong></div>
+            </div>
+            <div class="ledger-vow"><span>所立江湖誓</span><blockquote id="ledger-vow">尚未立誓</blockquote></div>
+            <div class="journal">
+              <div class="journal-title"><span>近事</span><button id="clear-journal" type="button" title="只清除顯示紀錄">拂去</button></div>
+              <ol id="journal-list"></ol>
+            </div>
+            <div class="ledger-tip"><span>江湖訣</span><p id="ledger-tip">陽骰高則生勢；陰骰高則回息。看清氣向，往往比只看成敗更重要。</p></div>
+          </aside>
+        </div>
+      </section>
+
+      <section class="view archive-view" id="view-archive" data-view="archive" aria-labelledby="archive-title">
+        <header class="archive-mast section-pad">
+          <div class="section-label light"><span>秘卷</span><i></i><small>ARCHIVE</small></div>
+          <p class="eyebrow">八門 · 七脈 · 四十二式</p>
+          <h1 id="archive-title">藏經閣</h1>
+          <p>門派決定你的因果，派系決定你的手法。這裡所有內容都是可直接上桌的原創資料。</p>
+        </header>
+
+        <div class="archive-tools">
+          <div class="archive-tabs" role="tablist" aria-label="藏經分類">
+            <button class="active" type="button" role="tab" aria-selected="true" data-archive-tab="sects">八門譜 <span>8</span></button>
+            <button type="button" role="tab" aria-selected="false" data-archive-tab="styles">武功派系 <span>7</span></button>
+            <button type="button" role="tab" aria-selected="false" data-archive-tab="techniques">武學總錄 <span>42</span></button>
+          </div>
+          <label class="search-field"><span class="sr-only">搜尋藏經閣</span><input id="archive-search" type="search" placeholder="搜尋門派、招式、派系…" /><b aria-hidden="true">⌕</b></label>
+        </div>
+        <div class="archive-content section-pad" id="archive-content"></div>
+      </section>
+
+      <section class="view rules-view" id="view-rules" data-view="rules" aria-labelledby="rules-title">
+        <header class="rules-mast section-pad">
+          <div class="rules-title-block">
+            <div class="section-label"><span>律</span><i></i><small>CORE RULES</small></div>
+            <p class="eyebrow dark">規則輕，後果重</p>
+            <h1 id="rules-title">江湖律</h1>
+            <p>準備一黑一白兩顆六面骰。沒有骰子也沒關係，遊戲內建擲骰器。</p>
+          </div>
+          <div class="quick-rule">
+            <span>核心公式</span>
+            <strong>陰 D6 ＋ 陽 D6<br />＋ 一項屬性</strong>
+            <p>再依局勢加減 1–2。玩家說明目的與手法後才擲骰。</p>
+          </div>
+        </header>
+
+        <div class="rules-body section-pad">
+          <aside class="rules-index" aria-label="規則章節">
+            <a href="#rule-roll">一 · 行事判定</a><a href="#rule-yinyang">二 · 陰陽氣向</a><a href="#rule-stats">三 · 五項屬性</a><a href="#rule-combat">四 · 過招</a><a href="#rule-growth">五 · 修為與傷痕</a><a href="#rule-table">六 · 團務玩法</a><a href="#rule-safety">七 · 同桌約定</a>
+          </aside>
+
+          <article class="rules-prose">
+            <section id="rule-roll">
+              <p class="rule-number">第一條</p><h2>行事判定</h2>
+              <p>只有當結果不確定，而且成功與失敗都會推動故事時才擲骰。先說明你要做到什麼、採取什麼手法；主持人據此選一項屬性與局勢修正。</p>
+              <div class="outcome-grid">
+                <div class="legendary"><strong>12＋</strong><h3>傳奇</h3><p>做到了，而且留下超出預期的好處。戰鬥招式通常額外 +1 傷害。</p></div>
+                <div class="clean"><strong>9–11</strong><h3>得手</h3><p>完整做到你宣告的目的，不必承擔額外代價。</p></div>
+                <div class="cost"><strong>6–8</strong><h3>兩難</h3><p>做到主要目的，但承受傷勢、耗損、暴露或艱難選擇。</p></div>
+                <div class="miss"><strong>5－</strong><h3>失手</h3><p>局勢朝不利方向推進。你仍獲得一點修為，因為失敗也會留下功課。</p></div>
+              </div>
+              <div class="rule-example"><span>例</span><p>顧聽瀾踏著船篷追刺客，以「身 2」判定。陰骰 3、陽骰 5，合計 10：得手。因陽高於陰，再獲得 1 點氣勢。</p></div>
+            </section>
+
+            <section id="rule-yinyang">
+              <p class="rule-number">第二條</p><h2>陰陽氣向</h2>
+              <div class="yin-yang-rules">
+                <article><span class="yin-dot">陰</span><div><h3>陰高 · 斂息</h3><p>回復 1 點內息。若內息已滿，改為得到一句關於危險、氣息或情緒的細微線索。</p></div></article>
+                <article><span class="yang-dot">陽</span><div><h3>陽高 · 生勢</h3><p>獲得 1 點氣勢，上限 3。擲骰前可燃燒 1 點氣勢，使本次總和 +2。</p></div></article>
+                <article><span class="harmony-dot">合</span><div><h3>陰陽同點 · 和合</h3><p>把結果提升一階：失手成兩難、兩難成得手、得手成傳奇。傳奇再提升則回復 1 體力。</p></div></article>
+              </div>
+            </section>
+
+            <section id="rule-stats">
+              <p class="rule-number">第三條</p><h2>五項屬性</h2>
+              <div class="rules-stat-grid" id="rules-stat-grid"></div>
+              <p>屬性通常在 1–3 之間。來歷、門派與武功派系各使一項屬性 +1；同一項最高為 3。</p>
+            </section>
+
+            <section id="rule-combat">
+              <p class="rule-number">第四條</p><h2>過招</h2>
+              <p>戰鬥以「一個有意義的交鋒」為一回合，不計秒數。玩家先選武學，擲骰後依結果結算；兩難或失手時敵人反擊。敵人沒有自己的擲骰回合，讓桌面保持俐落。</p>
+              <table>
+                <thead><tr><th>結果</th><th>你的招式</th><th>敵人反擊</th></tr></thead>
+                <tbody><tr><td>傳奇</td><td>完整傷害 +1，發動招式特效</td><td>無</td></tr><tr><td>得手</td><td>完整傷害，發動招式特效</td><td>無</td></tr><tr><td>兩難</td><td>完整傷害</td><td>承受敵方攻勢</td></tr><tr><td>失手</td><td>未造成傷害</td><td>承受敵方攻勢 +1</td></tr></tbody>
+              </table>
+              <p>護守類招式在得手時免除反擊，療傷類招式改為回復資源。強敵的「難度」會使你的總和 -1 或 -2。</p>
+            </section>
+
+            <section id="rule-growth">
+              <p class="rule-number">第五條</p><h2>修為與傷痕</h2>
+              <p>每次得手獲 2 修為、兩難獲 1、失手也獲 1。累積 6 修為進入「成境」，解鎖門派第三式；累積 14 修為進入「化境」，解鎖門派絕學。</p>
+              <p>體力歸零時不必立刻死亡：留下永久傷痕、失去 1 名望，帶著一半體力敗走。第三道傷痕之後，角色必須退隱、赴死或完成一場由全桌同意的最後一戰。</p>
+            </section>
+
+            <section id="rule-table">
+              <p class="rule-number">第六條</p><h2>一人或一桌人</h2>
+              <div class="table-modes"><article><span>單人</span><h3>直接玩十三回主線</h3><p>網頁生成場景與敵人，你選擇手法、擲骰並記錄後果。掌門錦囊可補充支線。</p></article><article><span>2–6 人</span><h3>由一位掌門主持</h3><p>每位玩家建立角色。主持人使用場景、人物與傳聞生成器，敵人攻勢依隊伍人數 +1。</p></article><article><span>無主持</span><h3>輪流執掌江湖</h3><p>每場景換一人描述後果；有疑問時擲「天意骰」，高為是、低為否，和合則出現轉折。</p></article></div>
+            </section>
+
+            <section id="rule-safety">
+              <p class="rule-number">第七條</p><h2>同桌約定</h2>
+              <p>武俠故事常涉及復仇、門派壓力、傷殘、官府暴力與家族責任。開局前請先說明不想出現的內容；任何人都能用「收劍」暫停場景、跳過細節或重寫方向，不必解釋理由。</p>
+              <div class="safety-card"><strong>收劍</strong><span>停止當前敘述</span><i></i><strong>換路</strong><span>保留情節但改寫細節</span><i></i><strong>續行</strong><span>確認大家都準備好再繼續</span></div>
+            </section>
+          </article>
+        </div>
+      </section>
+
+      <section class="view gm-view" id="view-gm" data-view="gm" aria-labelledby="gm-title">
+        <header class="gm-mast section-pad">
+          <div><div class="section-label light"><span>錦</span><i></i><small>GM KIT</small></div><p class="eyebrow">不必備完一整座江湖</p><h1 id="gm-title">掌門錦囊</h1><p>即席生成場景、人物與真假傳聞。適合主持人、無主持輪流敘事，或為單人主線添支流。</p></div>
+          <div class="gm-mantra"><span>主持三問</span><ol><li>此刻誰最想得到什麼？</li><li>若俠客不出手，事情會變多糟？</li><li>成功之後，要留下哪一筆新債？</li></ol></div>
+        </header>
+
+        <div class="gm-grid section-pad">
+          <article class="generator-card hook-generator">
+            <header><span>壹 · 江湖局</span><button type="button" data-generate="hook">再起一局 ↻</button></header>
+            <div class="hook-output" id="hook-output"></div>
+          </article>
+          <article class="generator-card npc-generator">
+            <header><span>貳 · 道中人</span><button type="button" data-generate="npc">換一位 ↻</button></header>
+            <div class="npc-output" id="npc-output"></div>
+          </article>
+          <article class="generator-card rumor-generator">
+            <header><span>參 · 風聲</span><button type="button" data-generate="rumor">再聽 ↻</button></header>
+            <div class="rumor-output" id="rumor-output"></div>
+          </article>
+          <article class="generator-card oracle-generator">
+            <header><span>肆 · 天意骰</span><small>問一個能以是／否回答的問題</small></header>
+            <div class="oracle-dice"><div class="oracle-die yin" id="oracle-yin">?</div><div class="oracle-die yang" id="oracle-yang">?</div></div>
+            <div class="oracle-result" id="oracle-result"><strong>尚未問天</strong><span>陰高偏否 · 陽高偏是 · 和合有轉折</span></div>
+            <button class="button button-primary full" type="button" data-generate="oracle">擲問天意</button>
+          </article>
+          <article class="generator-card dice-generator">
+            <header><span>伍 · 隨手擲骰</span><button type="button" id="clear-dice-log">清空</button></header>
+            <div class="dice-buttons"><button type="button" data-die="6">D6</button><button type="button" data-die="10">D10</button><button type="button" data-die="20">D20</button><button type="button" data-die="yin-yang">陰陽 D6</button></div>
+            <ol class="dice-log" id="dice-log"><li><span>—</span><b>等你擲下第一顆骰</b></li></ol>
+          </article>
+          <article class="generator-card clocks-generator">
+            <header><span>陸 · 局勢鐘</span><small>點擊格子推進威脅</small></header>
+            <label>威脅名稱<input id="clock-name" type="text" value="禁軍封鎖全城" maxlength="24" /></label>
+            <div class="clock-track" id="clock-track" aria-label="六格局勢鐘"></div>
+            <p id="clock-status">0 / 6 · 風聲未起</p>
+            <button class="text-button dark" id="reset-clock" type="button">重置局勢鐘</button>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="footer-brand"><span class="brand-seal">錄</span><div><b>江湖錄：風雨十三州</b><small>原創規則與世界觀 · MIT 開源</small></div></div>
+      <p>參考同類作品的節奏與類型設計，所有門派、武學、劇情與文字皆為本作原創。</p>
+      <div><button type="button" data-view-target="rules">規則</button><button type="button" data-view-target="gm">掌門工具</button><a href="https://github.com/Allenyuu/jianghu-chronicles" id="github-link" target="_blank" rel="noreferrer">GitHub ↗</a></div>
+    </footer>
+
+    <dialog class="game-dialog" id="save-dialog">
+      <form method="dialog" class="dialog-shell">
+        <header><div><p class="eyebrow dark">人物卷管理</p><h2>存檔工具</h2></div><button class="dialog-close" value="cancel" aria-label="關閉">×</button></header>
+        <p>進度會自動保存在這台裝置。匯出 JSON 可跨裝置保存或交給同桌伙伴。</p>
+        <div class="dialog-actions">
+          <button type="button" id="dialog-export"><span>↓</span><b>匯出人物卷</b><small>下載 JSON 備份</small></button>
+          <label><span>↑</span><b>匯入人物卷</b><small>從 JSON 還原</small><input id="import-save" type="file" accept="application/json,.json" /></label>
+          <button class="danger" type="button" id="restart-game"><span>↺</span><b>另起新卷</b><small>封存目前進度並重建角色</small></button>
+        </div>
+      </form>
+    </dialog>
+
+    <dialog class="game-dialog detail-dialog" id="detail-dialog">
+      <form method="dialog" class="dialog-shell">
+        <button class="dialog-close floating" value="cancel" aria-label="關閉">×</button>
+        <div id="detail-dialog-content"></div>
+      </form>
+    </dialog>
+
+    <div class="toast-region" id="toast-region" role="status" aria-live="polite"></div>
+
+    <script src="data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

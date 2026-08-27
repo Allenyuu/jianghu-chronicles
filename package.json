@@ -1,0 +1,13 @@
+{
+  "name": "jianghu-chronicles",
+  "version": "1.0.0",
+  "private": true,
+  "description": "《江湖錄：風雨十三州》— 可在瀏覽器遊玩的原創繁體中文武俠 TRPG",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.mjs",
+    "build": "node scripts/build.mjs",
+    "test": "node scripts/test.mjs"
+  },
+  "license": "MIT"
+}
